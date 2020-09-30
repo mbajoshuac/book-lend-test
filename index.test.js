@@ -4,22 +4,28 @@ let store = []
 
 let book = new Books('Things Fall Apart', 'Chinue Achebe', '234');
 
-
-test("Add a new book to the store array", () => {
-    expect(book.addBook()).toBeGreaterThan(0)
+describe('Add a new Book', () => {
+    test("Check if book adding is successful", () => {
+        expect(book.addBook()).toBeTruthy()
+    })
+})
+describe('Lending Book Out', () => {
+    test("Should Return True if book is lended out", () => {
+        let title = 'Things Fall Apart';
+        expect(book.lendBook(title)).toBeTruthy()
+    })
 })
 
-test("Check if the Lend Status changes when book is lended", () => {
-    let title = 'Things Fall Apart';
-    expect(book.lendBook(title)).toBe(true)
+describe('Book Lending Availability', () => {
+    test("Check if Book is availbale for Lending", () => {
+        let title = 'Things Fall Apart';
+        expect(book.checkBookDetails(title)).toBe("Rented out")
+    })
 })
 
-test("Check if Book is availbale for Lending", () => {
-    let title = 'Things Fall Apart';
-    expect(book.checkBookDetails(title)).toBe("Rented out")
-})
-
-test("Return A book and update the lend status", () => {
-    let title = 'Things Fall Apart';
-    expect(book.returnBook(title)).toBe(false)
+describe('Book Returning', () => {
+    test("Should Return false if book is rented", () => {
+        let title = 'Things Fall Apart';
+        expect(book.returnBook(title)).toBeFalsy()
+    })
 })

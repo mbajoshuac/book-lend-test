@@ -1,6 +1,7 @@
 /*
- * Using the Prototype design pattern to implement a Book lending service
+ * Using the Prototype Design pattern on a to implement a Book lending service
  * Kindly uncomment the function call at the end to exec code
+ * 
  */
 let store = []
 
@@ -45,40 +46,6 @@ Books.prototype = {
     }
 
 }
-
-// create a new book class for a book that is to be added to the store array. Books Parameters are (bookTitle, BookAuthor, Book page Number);
-// let book1 = new Books('Things Fall Apart', 'Chinue Achebe', '234');
-// let book2 = new Books('Play not with your Salvation', 'Mrs Nkeiruka Mba', '234');
-// let book3 = new Books('Dealing with Faulty Foundations', 'Dr kelechi Mba', '144');
-// let book4 = new Books('The Central Bank of Ideas', 'Ogbonnia Ikedichi', '543');
-
-//Add Book to the store array
-// const booksToAdd = (book) => {
-
-//     return book.addBook();
-
-// }
-
-// //lend out a particular book
-// const booksToLend = (book) => {
-
-//     book.lendBook(book.title);
-// }
-
-
-// const booksToCheck = (book) => {
-
-//     book.checkBookDetails(book.title);
-
-// }
-
-
-// const booksToReturn = (book) => {
-
-//     book.returnBook(book.title);
-
-// }
-
 
 
 
